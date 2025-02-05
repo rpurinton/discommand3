@@ -3,5 +3,6 @@
     "port": 5673,
     "vhost": "discommand",
     "user": "discommand",
-    "password": "discommand"
+    "password": "discommand",
+    "heartbeat": 45
 }

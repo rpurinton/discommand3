@@ -77,22 +77,22 @@
         },
         {
             "name": "discommand2/bunny",
-            "version": "v0.5.5.3",
+            "version": "v0.5.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/discommand2/bunny.git",
-                "reference": "323d209e685fb282b0f4738a44190acf65b0e890"
+                "reference": "d24d61688c5ef33aa286fe0a8a78571c2b0cce5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/discommand2/bunny/zipball/323d209e685fb282b0f4738a44190acf65b0e890",
-                "reference": "323d209e685fb282b0f4738a44190acf65b0e890",
+                "url": "https://api.github.com/repos/discommand2/bunny/zipball/d24d61688c5ef33aa286fe0a8a78571c2b0cce5e",
+                "reference": "d24d61688c5ef33aa286fe0a8a78571c2b0cce5e",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1 || ^8.0",
                 "react/event-loop": "^1.0 || ^0.5 || ^0.4",
-                "react/promise": "^2.2 || ^3.0"
+                "react/promise": "^3.0 || ^2.2"
             },
             "require-dev": {
                 "ext-pcntl": "*",
@@ -139,9 +139,9 @@
                 "reactphp"
             ],
             "support": {
-                "source": "https://github.com/discommand2/bunny/tree/v0.5.5.3"
+                "source": "https://github.com/discommand2/bunny/tree/v0.5.5.4"
             },
-            "time": "2025-02-05T03:04:16+00:00"
+            "time": "2025-02-05T04:56:37+00:00"
         },
         {
             "name": "discord-php/http",
