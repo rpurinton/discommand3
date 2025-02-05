@@ -1,0 +1,15 @@
+{
+    "require": {
+        "openai-php/client": "^0.10.3",
+        "guzzlehttp/guzzle": "^7.9",
+        "team-reflex/discord-php": "^10.3",
+        "mehrab-wj/tiktoken-php": "^1.0",
+        "react/async": "^4.3",
+        "discommand2/bunny": "^0.5.5"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
