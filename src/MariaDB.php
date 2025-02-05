@@ -2,7 +2,7 @@
 
 namespace RPurinton\Discommand;
 
-Class MariaDB
+class MariaDB
 {
 	private $sql;
 
@@ -10,7 +10,7 @@ Class MariaDB
 	{
 		extract(Config::get('mariadb'));
 		$this->sql = mysqli_connect($host, $user, $password, $db, $port);
-		if(!$this->sql) throw \Exception("MariaDB Connect Error");
+		if (!$this->sql) throw new \Exception('MariaDB connection failed');
 	}
 
 	public function query($query)

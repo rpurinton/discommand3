@@ -4,8 +4,6 @@ namespace RPurinton\Discommand;
 
 class RabbitMQ
 {
-	private $config = null; private $channel = null;
-
         function __construct(private $loop, private $queue, private $callback)
         {
                 $client = new \Bunny\Async\Client($loop, Config::get('rabbitmq'));
@@ -19,7 +17,6 @@ class RabbitMQ
 
         private function consume($channel)
         {
-                $this->channel = $channel;
                 $channel->qos(0, 1);
                 $channel->consume($this->process(...), $this->queue);
         }
@@ -32,13 +29,13 @@ class RabbitMQ
 
         public static function publish($queue, $data)
         {
-		$data = json_encode($data);
-		$client = new \Bunny\Client(Config::get('rabbitmq'));
-		$client->connect();
-		$channel = $client->channel();
-		$channel->queueDeclare($queue, false, true, false, false);
-		$channel->publish($data, [], '', $queue);
-		$channel->close();
-		$client->disconnect();
+                $data = json_encode($data);
+                $client = new \Bunny\Client(Config::get('rabbitmq'));
+                $client->connect();
+                $channel = $client->channel();
+                $channel->queueDeclare($queue, false, true, false, false);
+                $channel->publish($data, [], '', $queue);
+                $channel->close();
+                $client->disconnect();
         }
 }
